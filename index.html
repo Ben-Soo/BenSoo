@@ -6,45 +6,18 @@
     <title>Soo's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <style>
-        body {
-            background-image: url('https://raw.githubusercontent.com/Ben-Soo/BenSoo/main/githubbackground.png');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            font-family: Arial, sans-serif;
-            color: white;
-            text-align: center;
-        }
-        header {
-            padding: 50px;
-        }
-        section {
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.6);
-            margin: 20px;
-            border-radius: 10px;
-        }
-        footer {
-            padding: 10px;
-            background: rgba(0, 0, 0, 0.8);
-        }
-        a {
-            color: #FFD700;
-        }
-    </style>
 </head>
 <body>
     <header>
-        <h1>Soo</h1>
-        <p>Master's Student | Finance & Machine Learning Enthusiast</p>
+        <h1 class="animated-text">Soo</h1>
+        <p id="typing-text"></p>
     </header>
-    
+
     <section id="about">
         <h2>About Me</h2>
         <p>Welcome to my personal webpage! I am a master's student specializing in finance and machine learning. Passionate about AI in financial applications.</p>
     </section>
-    
+
     <section id="projects">
         <h2>Projects</h2>
         <div class="project">
@@ -56,16 +29,30 @@
             <p>Evaluating strategic investment decisions using NPV and binomial models.</p>
         </div>
     </section>
-    
+
     <section id="contact">
         <h2>Contact Me</h2>
         <p>Email: your.email@example.com</p>
-        <p>LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></p>
-        <p>GitHub: <a href="#">github.com/yourgithub</a></p>
+        <p>LinkedIn: <a href="#" class="glow-button">LinkedIn</a></p>
+        <p>GitHub: <a href="#" class="glow-button">GitHub</a></p>
     </section>
-    
+
     <footer>
         <p>&copy; 2024 Soo. All rights reserved.</p>
     </footer>
+
+    <!-- Typing Effect Script -->
+    <script>
+        const text = "Master's Student | Finance & Machine Learning Enthusiast";
+        let i = 0;
+        function typeEffect() {
+            if (i < text.length) {
+                document.getElementById("typing-text").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeEffect, 100);
+            }
+        }
+        window.onload = typeEffect;
+    </script>
 </body>
 </html>
