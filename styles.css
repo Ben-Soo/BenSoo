@@ -1,75 +1,28 @@
-/* General Styles */
 body {
-    font-family: 'Roboto', sans-serif;
+    background-image: url('https://github.com/Ben-Soo/BenSoo/blob/main/githubbackground.png?raw=true');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
     color: white;
     text-align: center;
     margin: 0;
     padding: 0;
-    background: url('https://raw.githubusercontent.com/Ben-Soo/BenSoo/main/githubbackground.png') no-repeat center center fixed;
-    background-size: cover;
-    position: relative;
 }
 
-/* Dark Overlay for Readability */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: -1;
-}
-
-/* Header */
-header {
-    padding: 20px;
-}
-
-/* Animated Header Text */
-h1 {
-    font-size: 50px;
-    font-weight: bold;
-    color: #FFD700;
-    animation: fadeIn 2s ease-in-out;
-}
-
-/* Keyframe Animation */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-/* Section Box Styling */
 .section-box {
-    background: rgba(100, 100, 100, 0.8); /* Dark Gray Background */
+    max-width: 800px;
+    background: rgba(50, 50, 50, 0.8);
     padding: 20px;
     margin: 20px auto;
     border-radius: 10px;
-    max-width: 800px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Project Cards */
-.project {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 15px;
-    margin: 15px 0;
-    border-radius: 8px;
-    transition: transform 0.3s ease-in-out;
+h1, h2 {
+    color: #FFD700;
 }
 
-.project:hover {
-    transform: scale(1.05);
-}
-
-/* Footer */
-footer {
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.9);
-}
-
-/* Links */
 a {
     color: #FFD700;
     text-decoration: none;
@@ -79,21 +32,8 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Button Styling */
-.glow-button {
-    padding: 10px 20px;
-    border-radius: 8px;
-    background-color: #ff758c;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    box-shadow: 0 0 5px #ff758c, 0 0 10px #ff758c;
-    transition: all 0.3s ease-in-out;
-    display: inline-block;
-    margin-top: 10px;
-}
-
-.glow-button:hover {
-    box-shadow: 0 0 20px #ff758c, 0 0 40px #ff758c;
-    transform: scale(1.1);
+footer {
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    margin-top: 20px;
 }
