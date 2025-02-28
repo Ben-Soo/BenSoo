@@ -23,8 +23,7 @@ body {
 
 /* Header */
 header {
-    padding: 50px;
-    text-transform: uppercase;
+    padding: 20px;
 }
 
 /* Animated Header Text */
@@ -41,13 +40,14 @@ h1 {
     to { opacity: 1; }
 }
 
-/* Sections */
-section {
+/* Section Box Styling */
+.section-box {
+    background: rgba(100, 100, 100, 0.8); /* Dark Gray Background */
     padding: 20px;
-    background: rgba(0, 0, 0, 0.7);
     margin: 20px auto;
     border-radius: 10px;
     max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Project Cards */
