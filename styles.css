@@ -1,9 +1,86 @@
+/* Background Animation */
 body {
-    background-image: url('https://raw.githubusercontent.com/Ben-Soo/BenSoo/main/githubbackground.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background: linear-gradient(-45deg, #1e3c72, #2a5298, #8e44ad, #ff6b6b);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
     font-family: Arial, sans-serif;
     color: white;
     text-align: center;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Background Image Parallax Effect */
+body::before {
+    content: "";
+    background: url('https://raw.githubusercontent.com/Ben-Soo/BenSoo/main/githubbackground.png') no-repeat center center fixed;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+    animation: moveBackground 20s linear infinite;
+}
+
+@keyframes moveBackground {
+    0% { background-position: center top; }
+    50% { background-position: center bottom; }
+    100% { background-position: center top; }
+}
+
+/* Animated Header Text */
+.animated-text {
+    font-size: 50px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff7eb3, #ff758c, #ff7eb3);
+    background-clip: text;
+    color: transparent;
+    animation: textAnimation 3s infinite alternate;
+}
+
+@keyframes textAnimation {
+    from { letter-spacing: 2px; }
+    to { letter-spacing: 8px; }
+}
+
+/* Sections */
+section {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    margin: 20px;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Links */
+a {
+    color: #FFD700;
+}
+
+/* Glowing Button */
+.glow-button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #ff758c;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 0 5px #ff758c, 0 0 10px #ff758c;
+    transition: all 0.3s ease-in-out;
+}
+
+.glow-button:hover {
+    box-shadow: 0 0 20px #ff758c, 0 0 40px #ff758c;
 }
