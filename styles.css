@@ -27,19 +27,18 @@ header {
     text-transform: uppercase;
 }
 
-/* Animated Text */
-.animated-text {
+/* Animated Header Text */
+h1 {
     font-size: 50px;
     font-weight: bold;
-    background: linear-gradient(90deg, #ff7eb3, #ff758c, #ff7eb3);
-    background-clip: text;
-    color: transparent;
-    animation: textAnimation 3s infinite alternate;
+    color: #FFD700;
+    animation: fadeIn 2s ease-in-out;
 }
 
-@keyframes textAnimation {
-    from { letter-spacing: 2px; }
-    to { letter-spacing: 8px; }
+/* Keyframe Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* Sections */
@@ -76,7 +75,11 @@ a {
     text-decoration: none;
 }
 
-/* Glowing Button */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Button Styling */
 .glow-button {
     padding: 10px 20px;
     border-radius: 8px;
@@ -86,6 +89,8 @@ a {
     text-decoration: none;
     box-shadow: 0 0 5px #ff758c, 0 0 10px #ff758c;
     transition: all 0.3s ease-in-out;
+    display: inline-block;
+    margin-top: 10px;
 }
 
 .glow-button:hover {
