@@ -1,41 +1,37 @@
-/* Background Animation */
+/* Smooth Gradient Background Animation */
 body {
     background: linear-gradient(-45deg, #1e3c72, #2a5298, #8e44ad, #ff6b6b);
     background-size: 400% 400%;
-    animation: gradientAnimation 10s ease infinite;
+    animation: gradientAnimation 15s ease infinite;
     font-family: Arial, sans-serif;
     color: white;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
+/* Background Animation */
 @keyframes gradientAnimation {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
-/* Background Image Parallax Effect */
+/* Background Image */
 body::before {
     content: "";
-    background: url('https://raw.githubusercontent.com/Ben-Soo/BenSoo/main/githubbackground.png') no-repeat center center fixed;
-    background-size: cover;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    background: url('https://raw.githubusercontent.com/Ben-Soo/BenSoo/main/githubbackground.png') no-repeat center center fixed;
+    background-size: cover;
     opacity: 0.3;
-    animation: moveBackground 20s linear infinite;
+    z-index: -1;
 }
 
-@keyframes moveBackground {
-    0% { background-position: center top; }
-    50% { background-position: center bottom; }
-    100% { background-position: center top; }
-}
-
-/* Animated Header Text */
+/* Header Animation */
 .animated-text {
     font-size: 50px;
     font-weight: bold;
@@ -53,7 +49,7 @@ body::before {
 /* Sections */
 section {
     padding: 20px;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7);
     margin: 20px;
     border-radius: 10px;
 }
@@ -61,12 +57,13 @@ section {
 /* Footer */
 footer {
     padding: 10px;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9);
 }
 
 /* Links */
 a {
     color: #FFD700;
+    text-decoration: none;
 }
 
 /* Glowing Button */
@@ -83,4 +80,5 @@ a {
 
 .glow-button:hover {
     box-shadow: 0 0 20px #ff758c, 0 0 40px #ff758c;
+    transform: scale(1.1);
 }
