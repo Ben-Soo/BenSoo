@@ -1,0 +1,9 @@
+body {
+    background-image: url('https://github.com/Ben-Soo/BenSoo/blob/main/githubbackground.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+}
