@@ -1,5 +1,6 @@
+/* Background Styling */
 body {
-    background-image: url('https://github.com/Ben-Soo/BenSoo/blob/main/githubbackground.png?raw=true');
+    background-image: url('https://raw.githubusercontent.com/Ben-Soo/BenSoo/main/githubbackground.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -10,15 +11,17 @@ body {
     padding: 0;
 }
 
+/* Text Box Styling */
 .section-box {
     max-width: 800px;
     background: rgba(50, 50, 50, 0.8);
     padding: 20px;
     margin: 20px auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* Heading & Text Styling */
 h1, h2 {
     color: #FFD700;
 }
@@ -32,6 +35,7 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Footer Styling */
 footer {
     padding: 10px;
     background: rgba(0, 0, 0, 0.8);
