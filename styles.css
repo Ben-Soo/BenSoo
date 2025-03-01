@@ -1,64 +1,81 @@
-/* Background Styling */
-body {
-    background-image: url('https://raw.githubusercontent.com/Ben-Soo/BenSoo/main/githubbackground.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    font-family: Arial, sans-serif;
-    color: white;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-/* Text Box Styling */
-.section-box {
-    max-width: 800px;
-    background: rgba(50, 50, 50, 0.8);  /* Dark semi-transparent background */
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* Heading & Text Styling */
-h1 {
-    font-size: 2.5em;
-    font-weight: bold;
-    color: #FFD700;  /* Gold color for elegance */
+/* Smooth Floating Effect for Titles */
+@keyframes floatText {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
 }
 
 h2 {
     font-size: 2em;
     color: #FFD700;
+    animation: floatText 3s infinite ease-in-out;
 }
 
-h3 {
-    font-size: 1.5em;
+/* Typewriter Effect for Header */
+#typewriter {
+    font-size: 18px;
+    font-weight: bold;
     color: #ffffff;
-    text-decoration: underline;
+    font-family: monospace;
 }
 
-p {
-    font-size: 1.2em;
-    line-height: 1.6;
+/* Background Animation */
+@keyframes stars {
+    from { background-position: 0 0; }
+    to { background-position: 100% 100%; }
 }
 
-/* Link Styling */
+body {
+    background-image: url('https://raw.githubusercontent.com/Ben-Soo/BenSoo/main/githubbackground.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    animation: stars 15s linear infinite alternate;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Section Box Styling */
+.section-box {
+    background-color: rgba(50, 50, 50, 0.8);
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
+}
+
+/* Links Hover Glow Effect */
 a {
     color: #FFD700;
     text-decoration: none;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 a:hover {
+    text-shadow: 0px 0px 10px #FFD700;
     text-decoration: underline;
 }
 
-/* Footer Styling */
-footer {
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.8);
-    margin-top: 20px;
-    font-size: 1em;
+/* Hover Shake Effect for Contact Section */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-3px); }
+    50% { transform: translateX(3px); }
+    75% { transform: translateX(-3px); }
+    100% { transform: translateX(0); }
+}
+
+#contact:hover {
+    animation: shake 0.5s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-box {
+        width: 90%;
+        padding: 15px;
+    }
 }
