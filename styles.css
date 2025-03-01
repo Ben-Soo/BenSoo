@@ -14,7 +14,7 @@ body {
 /* Text Box Styling */
 .section-box {
     max-width: 800px;
-    background: rgba(50, 50, 50, 0.8);
+    background: rgba(50, 50, 50, 0.8);  /* Dark semi-transparent background */
     padding: 20px;
     margin: 20px auto;
     border-radius: 10px;
@@ -22,13 +22,33 @@ body {
 }
 
 /* Heading & Text Styling */
-h1, h2 {
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #FFD700;  /* Gold color for elegance */
+}
+
+h2 {
+    font-size: 2em;
     color: #FFD700;
 }
 
+h3 {
+    font-size: 1.5em;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Link Styling */
 a {
     color: #FFD700;
     text-decoration: none;
+    font-weight: bold;
 }
 
 a:hover {
@@ -40,4 +60,5 @@ footer {
     padding: 10px;
     background: rgba(0, 0, 0, 0.8);
     margin-top: 20px;
+    font-size: 1em;
 }
