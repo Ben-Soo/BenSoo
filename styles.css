@@ -1,3 +1,8 @@
+/* Make "Ben" Blue */
+.blue-text {
+    color: #00BFFF; /* Blue color */
+}
+
 /* Smooth Floating Effect for Titles */
 @keyframes floatText {
     0% { transform: translateY(0px); }
